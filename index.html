@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="estilos.css" />
+		<title>CV Danny La Torre</title>
+	</head>
+	<body>
+		<!-- SECCION INICIO -->
+		<section class="inicio" id="inicio">
+			<!-- Agrega el elemento de video aquí -->
+			<video class="video-background" autoplay muted loop>
+				<source src="img/Fondo_para_vídeo_HD_2018.mp4" type="video/mp4" />
+				<!-- Agrega etiquetas de origen adicionales para otros formatos de video si es necesario -->
+				<!-- <source src="ruta_del_video.webm" type="video/webm"> -->
+				<!-- <source src="ruta_del_video.ogv" type="video/ogg"> -->
+				<!-- Contenido de respaldo del video -->
+				Su navegador no admite el elemento de video.
+			</video>
+			<div class="contenido-seccion">
+				<header>
+					<div class="nav-bar" onclick="mostrarOcultarMenu()">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					<nav id="nav" class="nav">
+						<a href="#inicio">Inicio</a>
+						<a href="#sobremi">Sobre mi</a>
+						<a href="#habilidades">Habilidades</a>
+						<a href="#resumen">Resumen</a>
+						<a href="#contacto">Contacto</a>
+					</nav>
+				</header>
+				<div class="info">
+					<h1>Danny La Torre</h1>
+					<h2>ESTUDIANTE, DESARROLLADOR, DISEÑADOR</h2>
+					<div class="redes">
+						<a href="#"><i class="fa-brands fa-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+					</div>
+				</div>
+				<div class="foto">
+					<img src="img/kevin.wsp.jpg" alt="" />
+				</div>
+			</div>
+		</section>
+		<!-- SECCION SOBRE MI -->
+		<section class="sobremi" id="sobremi">
+			<div class="contenido-seccion">
+				<h3>Detalles Personales</h3>
+
+				<p class="especial">
+					Me dedico a producir ideas creativas y originales para mis clientes
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nam
+					aliquid consequuntur quos laudantium voluptate! Quia, vel dolor
+					corporis nihil assumenda cumque quae nesciunt saepe, eum soluta
+					asperiores, laudantium dolore!
+				</p>
+
+				<div class="fila">
+					<div class="col">
+						<i class="fa-solid fa-user"></i>
+						<span class="titulo-detale">perfil</span>
+						<p>
+							Soy estudiante de la carrera de Computación e Informática del
+							instituto Cibertec y actualmente me encuentro culminando la
+							carrera, me defino como una persona puntual, desenvolvente,
+							sociable, facilidad de adaptación a distintos ambientes, buen
+							trabajo en equipo, rápida solución de problemas y confianza en sí
+							mismo.
+						</p>
+					</div>
+					<div class="col">
+						<i class="fa-solid fa-location-pin"></i>
+						<span class="titulo-detale">Ubicación</span>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consequatur laudantium temporibus nulla aspernatur ad numquam
+							quidem labore! Exercitationem repellendus aspernatur, minima eum,
+							cumque nisi quidem ratione tenetur voluptatum expedita facilis!
+						</p>
+					</div>
+					<div class="col">
+						<i class="fa-solid fa-flag"></i>
+						<span class="titulo-detale">Intereses</span>
+						<p>
+							Uno de mis objetivos profesionales se adapta a las necesidades de
+							evolucionar y mejorar dentro de la empresa donde me desarrolle
+							como profesional, aportando mis conocimientos y capacidades
+							adquiridas durante el aprendizaje de mi centro de estudio para el
+							cumplido de las metas deseadas y siempre manteniendo la seriedad y
+							visión de la empresa.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SECCION HABILIDADES-->
+		<section class="habilidades" id="habilidades">
+			<div class="contenido-seccion">
+				<h3>Me especializo en :</h3>
+
+				<div class="fila">
+					<div class="col">
+						<span>JAVA</span>
+						<div class="cont-barra">
+							<div class="barra" id="html">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>98%</span>
+						</div>
+					</div>
+					<div class="col">
+						<span>SQL</span>
+						<div class="cont-barra">
+							<div class="barra" id="javascript">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>60%</span>
+						</div>
+					</div>
+				</div>
+				<div class="fila">
+					<div class="col">
+						<span>HTML</span>
+						<div class="cont-barra">
+							<div class="barra" id="react">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>50%</span>
+						</div>
+					</div>
+					<div class="col">
+						<span>CSS</span>
+						<div class="cont-barra">
+							<div class="barra" id="java">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="fila">
+					<div class="col">
+						<span>JAVASCRIPT</span>
+						<div class="cont-barra">
+							<div class="barra" id="photoshop">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>60%</span>
+						</div>
+					</div>
+					<div class="col">
+						<span>REACT</span>
+						<div class="cont-barra">
+							<div class="barra" id="sql">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>50%</span>
+						</div>
+					</div>
+				</div>
+				<div class="fila">
+					<div class="col">
+						<span>NODE JS</span>
+						<div class="cont-barra">
+							<div class="barra" id="nodejs">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>60%</span>
+						</div>
+					</div>
+					<div class="col">
+						<span>LINUX</span>
+						<div class="cont-barra">
+							<div class="barra" id="linux">
+								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
+							</div>
+							<span>50%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SECCION RESUMEN -->
+		<section class="resumen" id="resumen">
+			<div class="contenido-seccion">
+				<h3>Mi Preparacion y experiencia</h3>
+				<div class="info">
+					<div class="col">
+						<span class="titulo">Educacion</span>
+						<table>
+							<tr>
+								<td class="datos"><h3>2022-2023</h3></td>
+								<td rowspan="2" class="descripcion">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Libero, voluptatum aspernatur. Facilis aperiam, aliquid id
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Est. Tecnico en Computacion e Informatica</h4>
+									<p>Instituto Cibertec</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- columna experiencias -->
+					<div class="col">
+						<span class="titulo">Experiencia Laboral</span>
+						<table>
+							<tr>
+								<td class="datos"><h3>3 años</h3></td>
+								<td rowspan="2" class="descripcion">
+									Aunque soy relativamente nuevo en el campo laboral, he
+									completado proyectos académicos y colaborado en proyectos de
+									equipo durante mis estudios. Tengo experiencia en programación
+									en lenguajes como Java, así como en el desarrollo web con
+									HTML, CSS y JavaScript.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Proyectos Personales</h4>
+									<p>Desarrollador web Independiente</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SECCION CONTACTO -->
+		<section class="contacto" id="contacto">
+			<div class="contenido-seccion">
+				<h3>Ponte en contato ahora mismo !</h3>
+
+				<div class="fila">
+					<div class="col">
+						<h2><i class="fa-solid fa-phone"></i> Telefono</h2>
+						<span class="info-contacto">925-368-212</span>
+					</div>
+					<div class="col">
+						<h2><i class="fa-solid fa-envelope"></i> Correo</h2>
+						<span class="info-contacto">dannylatorrec@hotmail.com</span>
+					</div>
+					<div class="col">
+						<h2><i class="fa-solid fa-globe"></i> Pagina Web</h2>
+						<span class="info-contacto">kevinLatorre.com</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="app.js"></script>
+	</body>
+</html>
