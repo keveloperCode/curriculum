@@ -62,7 +62,7 @@ function efectoHabilidades() {
 	if (distancia_skills >= 300 && entro == false) {
 		entro = true;
 		const intervalHtml = setInterval(function () {
-			pintarBarra(html, 16, 0, intervalHtml);
+			pintarBarra(html, 10, 0, intervalHtml);
 		}, 100);
 		const intervalJavascript = setInterval(function () {
 			pintarBarra(javascript, 10, 1, intervalJavascript);
