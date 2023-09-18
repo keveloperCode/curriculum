@@ -2,269 +2,379 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!--========== BOX ICONS ==========-->
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
+			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
 		/>
-		<link rel="stylesheet" href="estilos.css" />
-		<title>CV Danny La Torre</title>
+
+		<!--========== CSS ==========-->
+		<link rel="stylesheet" href="css/estilos.css" />
+
+		<title>Responsive resume cv</title>
 	</head>
 	<body>
-		<!-- SECCION INICIO -->
-		<section class="inicio" id="inicio">
-			<!-- Agrega el elemento de video aquí -->
-			<video class="video-background" autoplay muted loop>
-				<source src="img/fondo_video_2.mp4" type="video/mp4" />
-				<!-- Agrega etiquetas de origen adicionales para otros formatos de video si es necesario -->
-				<!-- <source src="ruta_del_video.webm" type="video/webm"> -->
-				<!-- <source src="ruta_del_video.ogv" type="video/ogg"> -->
-				<!-- Contenido de respaldo del video -->
-				Su navegador no admite el elemento de video.
-			</video>
-			<div class="contenido-seccion">
-				<header>
-					<div class="nav-bar" onclick="mostrarOcultarMenu()">
-						<i class="fa-solid fa-bars"></i>
-					</div>
-					<nav id="nav" class="nav">
-						<a href="#inicio">Inicio</a>
-						<a href="#sobremi">Sobre mi</a>
-						<a href="#habilidades">Habilidades</a>
-						<a href="#resumen">Resumen</a>
-						<a href="#contacto">Contacto</a>
-					</nav>
-				</header>
-				<div class="info">
-					<h1>Danny La Torre</h1>
-					<h2>ESTUDIANTE, DESARROLLADOR, DISEÑADOR</h2>
-					<div class="redes">
-						<a href="https://www.facebook.com/"
-							><i class="fa-brands fa-facebook"></i
-						></a>
-						<a href="https://www.instagram.com/"
-							><i class="fa-brands fa-instagram"></i
-						></a>
-						<a href="https://www.linkedin.com//"
-							><i class="fa-brands fa-linkedin"></i
-						></a>
-						<a href="https://wa.link/9lh0mu"
-							><i class="fa-brands fa-whatsapp"></i
-						></a>
-					</div>
-				</div>
-				<div class="foto">
-					<img src="img/cnterno.JPG" alt="" />
-				</div>
-			</div>
-		</section>
-		<!-- SECCION SOBRE MI -->
-		<section class="sobremi" id="sobremi">
-			<div class="contenido-seccion">
-				<h3>Detalles Personales</h3>
+		<!--========== HEADER ==========-->
+		<header class="l-header" id="header">
+			<nav class="nav bd-container">
+				<a href="" class="nav__logo">Danny</a>
 
-				<p class="especial">
-					Me dedico a producir ideas creativas y originales para mis clientes
-				</p>
-				<p>
-					Implementar y satisfacer las necesidades o requerimientos a traves de
-					de un mejor control y manejo del servicio requerido.
-				</p>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#home" class="nav__link active-link">
+								<i class="bx bx-home"></i>Inicio
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#profile" class="nav__link">
+								<i class="bx bx-user"></i>Perfil
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#education" class="nav__link">
+								<i class="bx bx-book"></i>Formacion
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#skills" class="nav__link">
+								<i class="bx bx-receipt"></i>Habilidades
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#experience" class="nav__link">
+								<i class="bx bx-briefcase-alt"></i>Experiencia
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#certificates" class="nav__link">
+								<i class="bx bx-award"></i>Certificados
+							</a>
+						</li>
+					</ul>
+				</div>
 
-				<div class="fila">
-					<div class="col">
-						<i class="fa-solid fa-user"></i>
-						<span class="titulo-detale">perfil</span>
-						<p>
-							Soy estudiante de la carrera de Computación e Informática del
-							instituto Cibertec y actualmente me encuentro culminando la
-							carrera, me defino como una persona puntual, desenvolvente,
-							sociable, facilidad de adaptación a distintos ambientes, buen
-							trabajo en equipo, rápida solución de problemas y confianza en sí
-							mismo.
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="bx bx-grid-alt"></i>
+				</div>
+			</nav>
+		</header>
+
+		<main class="l-main bd-container">
+			<!-- All elements within this div, is generated in PDF -->
+			<div class="resume" id="area-cv">
+				<div class="resume__left">
+					<!--========== HOME ==========-->
+					<section class="home" id="home">
+						<div class="home__container section bd-grid">
+							<div class="home__data bd-grid">
+								<img src="img/foto-saco.JPG" alt="" class="home__img" />
+								<h1 class="home__title">Danny<b> La Torre</b></h1>
+								<h3 class="home__profession">Web developer</h3>
+
+								<!-- Boton para descargar tu cv en un archivo pdf  -->
+								<div>
+									<a download="" href="pdf/" class="home__button-movil"
+										>Download</a
+									>
+								</div>
+							</div>
+							<div class="home_address bd-grid">
+								<span class="home__information">
+									<i class="bx bx-map home__icon"></i>Jr. Carcamo #565 Lima -
+									Peru
+								</span>
+								<span class="home__information">
+									<i class="bx bx-envelope home__icon"></i
+									>dannylatorrec@hotmail.com
+								</span>
+								<span class="home__information">
+									<i class="bx bx-phone home__icon"></i>925-368-212
+								</span>
+							</div>
+						</div>
+
+						<!-- Theme change button -->
+						<i
+							class="bx bx-moon change-theme"
+							title="Theme"
+							id="theme-button"
+						></i>
+						<!-- Button to generate and download the pdf. Available for desktop. -->
+						<i
+							class="bx bx-download generate-pdf"
+							title="Generate PDF"
+							id="resume-button"
+						></i>
+					</section>
+
+					<!--========== SOCIAL ==========-->
+					<section class="social section">
+						<h2 class="section-title">SOCIAL</h2>
+						<div class="social__container bd-grid">
+							<a
+								href="https://www.linkedin.com/"
+								target="_blank"
+								class="social__link"
+							>
+								<i class="bx bxl-linkedin-square social__icon"></i> @keveloper
+							</a>
+							<a
+								href="https://www.facebook.com/"
+								target="_blank"
+								class="social__link"
+							>
+								<i class="bx bxl-facebook social__icon"></i> @keveloper
+							</a>
+							<a
+								href="https://www.instagram.com/"
+								target="_blank"
+								class="social__link"
+							>
+								<i class="bx bxl-instagram social__icon"></i> @keveloper
+							</a>
+						</div>
+					</section>
+
+					<!--========== PROFILE ==========-->
+					<section class="profile section" id="profile">
+						<h2 class="section-title">Perfil</h2>
+						<p class="profile__description">
+							Estudiante de la carrera de Computacion e informatica con
+							habilidades en Analisis y diseño de Sistemas , Desarrollo de
+							Aplicacion web y Aplicaciones moviles e interesés en desarrollarse
+							en áreas como Desorrollo Front-end o Desarrollo back-end.
 						</p>
-					</div>
-					<div class="col">
-						<i class="fa-solid fa-location-pin"></i>
-						<span class="titulo-detale">Ubicación</span>
-						<p>LIMA - PERU</p>
-					</div>
-					<div class="col">
-						<i class="fa-solid fa-flag"></i>
-						<span class="titulo-detale">Intereses</span>
-						<p>
-							Uno de mis objetivos profesionales se adapta a las necesidades de
-							evolucionar y mejorar dentro de la empresa donde me desarrolle
-							como profesional, aportando mis conocimientos y capacidades
-							adquiridas durante el aprendizaje de mi centro de estudio para el
-							cumplido de las metas deseadas y siempre manteniendo la seriedad y
-							visión de la empresa.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECCION HABILIDADES-->
-		<section class="habilidades" id="habilidades">
-			<div class="contenido-seccion">
-				<h3>Me especializo en :</h3>
+					</section>
 
-				<div class="fila">
-					<div class="col">
-						<span>JAVA</span>
-						<div class="cont-barra">
-							<div class="barra" id="html">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>65%</span>
-						</div>
-					</div>
-					<div class="col">
-						<span>SQL</span>
-						<div class="cont-barra">
-							<div class="barra" id="javascript">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>50%</span>
-						</div>
-					</div>
-				</div>
-				<div class="fila">
-					<div class="col">
-						<span>HTML</span>
-						<div class="cont-barra">
-							<div class="barra" id="react">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>70%</span>
-						</div>
-					</div>
-					<div class="col">
-						<span>CSS</span>
-						<div class="cont-barra">
-							<div class="barra" id="java">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>70%</span>
-						</div>
-					</div>
-				</div>
-				<div class="fila">
-					<div class="col">
-						<span>JAVASCRIPT</span>
-						<div class="cont-barra">
-							<div class="barra" id="photoshop">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>60%</span>
-						</div>
-					</div>
-					<div class="col">
-						<span>REACT</span>
-						<div class="cont-barra">
-							<div class="barra" id="sql">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>50%</span>
-						</div>
-					</div>
-				</div>
-				<div class="fila">
-					<div class="col">
-						<span>NODE JS</span>
-						<div class="cont-barra">
-							<div class="barra" id="nodejs">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>60%</span>
-						</div>
-					</div>
-					<div class="col">
-						<span>LINUX</span>
-						<div class="cont-barra">
-							<div class="barra" id="linux">
-								<!-- mediante javascript luego generaremos 17 barritos con clase e-->
-							</div>
-							<span>50%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECCION RESUMEN -->
-		<section class="resumen" id="resumen">
-			<div class="contenido-seccion">
-				<h3>Mi Preparacion y experiencia</h3>
-				<div class="info">
-					<div class="col">
-						<span class="titulo">Educacion</span>
-						<table>
-							<tr>
-								<td class="datos"><h3>2022-2023</h3></td>
-								<td rowspan="2" class="descripcion">
-									Estudiante cursando el tercer ciclo de la carrera de
-									Computacion e Informatica en el Instituto Cibertec.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<h4>Est. Tecnico en Computacion e Informatica</h4>
-									<p>Instituto Cibertec</p>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<!-- columna experiencias -->
-					<div class="col">
-						<span class="titulo">Experiencia Laboral</span>
-						<table>
-							<tr>
-								<td class="datos"><h3>3 años</h3></td>
-								<td rowspan="2" class="descripcion">
-									Aunque soy relativamente nuevo en el campo laboral, he
-									completado proyectos académicos y colaborado en proyectos de
-									equipo durante mis estudios. Tengo experiencia en programación
-									en lenguajes como Java, así como en el desarrollo web con
-									HTML, CSS y JavaScript.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<h4>Proyectos Personales</h4>
-									<p>Desarrollador web Independiente</p>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECCION CONTACTO -->
-		<section class="contacto" id="contacto">
-			<div class="contenido-seccion">
-				<h3>Ponte en contato ahora mismo !</h3>
+					<!--========== EDUCATION ==========-->
+					<section class="education section" id="education">
+						<h2 class="section-title">Formacion</h2>
+						<div class="education__container bd-grid">
+							<div class="education__content">
+								<div class="education__time">
+									<span class="education__rounder"></span>
+									<span class="education__line"></span>
+								</div>
 
-				<div class="fila">
-					<div class="col">
-						<h2><i class="fa-solid fa-phone"></i> Telefono</h2>
-						<span class="info-contacto">925-368-212</span>
-					</div>
-					<div class="col">
-						<h2><i class="fa-solid fa-envelope"></i> Correo</h2>
-						<span class="info-contacto">dannylatorrec@hotmail.com</span>
-					</div>
-					<div class="col">
-						<h2><i class="fa-solid fa-globe"></i> Pagina Web</h2>
-						<span class="info-contacto">kevinLatorre.com</span>
-					</div>
+								<div class="education__data bd-grid">
+									<h3 class="education__title">DESARROLLO FRONT-END</h3>
+									<span class="education__studies">Cibertec</span>
+									<span class="education__year">2021</span>
+								</div>
+							</div>
+							<div class="education__content">
+								<div class="education__time">
+									<span class="education__rounder"></span>
+									<!--<span class="education__line"></span>-->
+								</div>
+
+								<div class="education__data bd-grid">
+									<h3 class="education__title">DESARROLLO BACK-END</h3>
+									<span class="education__studies">Cibertec</span>
+									<span class="education__year">2021</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!--========== SKILLS  ==========-->
+					<section class="skills section" id="skills">
+						<h2 class="section-title">HABILIDADES</h2>
+						<div class="skills__content bd-grid">
+							<ul class="skills__data">
+								<li class="skills__name">
+									<span class="skills__circle"></span>Html
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>Css
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>Java
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>JavaScript
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>SQL
+								</li>
+							</ul>
+							<ul class="skills__data">
+								<li class="skills__name">
+									<span class="skills__circle"></span>React
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>Bootstrap
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>ASP.Net
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>Java EE
+								</li>
+								<li class="skills__name">
+									<span class="skills__circle"></span>MySql
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+
+				<div class="resume__right">
+					<!--========== EXPERIENCE ==========-->
+					<section class="experience section" id="experience">
+						<h2 class="section-title">Experience</h2>
+
+						<div class="experience__container bd-grid">
+							<div class="experience__content">
+								<div class="experience__time">
+									<span class="experience__rounder"></span>
+									<span class="experience__line"></span>
+								</div>
+
+								<div class="experience__data bd-grid">
+									<h3 class="experience__title">MASTER OF DESIGN</h3>
+									<span class="experience__company"
+										>Del 2013 2015 | Analista de datos</span
+									>
+									<p class="experience__description">
+										Trabaje en esta empresa tanto tiempo , desarrollando mis
+										habilidades
+									</p>
+								</div>
+							</div>
+							<div class="experience__content">
+								<div class="experience__time">
+									<span class="experience__rounder"></span>
+									<span class="experience__line"></span>
+								</div>
+
+								<div class="experience__data bd-grid">
+									<h3 class="experience__title">MASTER OF DESIGN</h3>
+									<span class="experience__company"
+										>Del 2013 al 2015 | Diseño web</span
+									>
+									<p class="experience__description">
+										Trabaje en esta empresa tanto tiempo , desarrollando mis
+										habilidades
+									</p>
+								</div>
+							</div>
+
+							<div class="experience__content">
+								<div class="experience__time">
+									<span class="experience__rounder"></span>
+								</div>
+
+								<div class="experience__data bd-grid">
+									<h3 class="experience__title">MASTER OF DESIGN</h3>
+									<span class="experience__company"
+										>Del 2013 2015 | Analista de datos</span
+									>
+									<p class="experience__description">
+										Trabaje en esta empresa tanto tiempo , desarrollando mis
+										habilidades
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!--========== CERTIFICATES ==========-->
+					<section class="certificate section" id="certificates">
+						<h2 class="section-title">CERTIFICADOS</h2>
+
+						<div class="certificate__container bd-grid">
+							<div class="certificate__content">
+								<h3 class="certificate__title">
+									Certificado en Introduccion al Desarrollo Web (2022)
+								</h3>
+								<p class="certificate__description">
+									Por cumplir con las expectativas de liderar el equipo para
+									desempeñar las tareas especificadas en el campo laboral.
+								</p>
+							</div>
+
+							<div class="certificate__content">
+								<h3 class="certificate__title">
+									Certificado en Introduccion al IoT (2022)
+								</h3>
+								<p class="certificate__description">
+									Por cumplir con las expectativas de liderar el equipo para
+									desempeñar las tareas especificadas en el campo laboral.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!--========== REFERENCES ==========-->
+					<!--aun no pondremos referencias porque somos nuevos :D-->
+
+					<!--========== LANGUAGES ==========-->
+					<section class="languages section">
+						<h2 class="section-title">IDIOMAS</h2>
+						<div class="languages__container">
+							<ul class="languages__content bd-grid">
+								<li class="languages__name">
+									<span class="languages__circle"></span>Español
+								</li>
+								<li class="languages__name">
+									<span class="languages__circle"></span>Ingles
+								</li>
+								<li class="languages__name">
+									<span class="languages__circle"></span>Portugues
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<!--========== INTERESTS ==========-->
+					<section class="interests section">
+						<h2 class="section-title">Intereses</h2>
+
+						<div class="interests__container bd-grid">
+							<div class="interests__content">
+								<i class="bx bx-headphone interests__icon"></i>
+								<span class="interests__name">Musica</span>
+							</div>
+
+							<div class="interests__content">
+								<i class="bx bxs-plane-alt interests__icon"></i>
+								<span class="interests__name">Viajar</span>
+							</div>
+
+							<div class="interests__content">
+								<i class="bx bx-book interests__icon"></i>
+								<span class="interests__name">Leer</span>
+							</div>
+
+							<div class="interests__content">
+								<i class="bx bx-code-alt interests__icon"></i>
+								<span class="interests__name">Programar</span>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
-		</section>
-		<script src="app.js"></script>
+		</main>
+
+		<!--========== SCROLL TOP ==========-->
+		<a href="#" class="scrolltop" id="scroll-top">
+			<i class="bx bxs-up-arrow-alt scrolltop__icon"></i>
+		</a>
+		<!--========== HTML2PDF ==========-->
+		<script src="js/html2pdf.bundle.min.js"></script>
+
+		<!--========== MAIN JS ==========-->
+		<script src="js/app.js"></script>
 	</body>
 </html>
+
+<!--Estudiante de la carrera de Computacion e informatica con
+habilidades en Analisis y diseño de Sistemas , Desarrollo de software y Aplicaciones moviles 
+e interesés en desarrollarse en áreas como Desorrollo Front-end o Desarrollo back-end.
+Me motiva mis objetivos profesionales y la vocacion por la programacion el cual se adapta 
+a las necesidades de evolucionar
+-->
